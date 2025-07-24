@@ -56,4 +56,7 @@ ultralytics
 ultralytics-thop
 urllib3
 Werkzeug
+streamlit
 plotly
+reportlab
+fer
