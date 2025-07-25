@@ -60,3 +60,4 @@ plotly
 reportlab
 fer
 moviepy
+kaleido
