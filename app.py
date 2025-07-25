@@ -2,7 +2,7 @@ import streamlit as st
 import cv2
 import mediapipe as mp
 import numpy as np
-from FaceFeatureExtractor import FaceFeatureExtractor
+from FaceFeatureExtractor2 import FaceFeatureExtractor
 import uuid
 from datetime import datetime
 from ultralytics import YOLO
@@ -34,7 +34,7 @@ mp_face_mesh = mp.solutions.face_mesh
 
 # Configure Streamlit page
 st.set_page_config(
-    page_title="Face Engagement Analyzer",
+    page_title="AI-Powered Crowd Engagement Analyzer",
     page_icon="👁️",
     layout="wide",
     initial_sidebar_state="expanded"
