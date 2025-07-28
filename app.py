@@ -28,6 +28,29 @@ from reportlab.lib import colors
 import plotly.io as pio
 from fer import FER
 
+import subprocess
+import sys
+
+subprocess.run(["pip", "uninstall", "-y", "opencv-python", "opencv-contrib-python"])
+subprocess.run(["pip", "install", "opencv-python-headless"])
+
+
+import kaleido
+
+# This will download a private headless Chrome for Kaleido
+# and configure Kaleido to use it automatically.
+chrome_install_dir = os.path.expanduser(
+    "~/.local/lib/python3.11/site-packages/choreographer/cli/browser_exe/chrome‑linux64"
+)
+if not os.path.isdir(chrome_install_dir):
+    try:
+        kaleido.get_chrome_sync()
+    except Exception as e:
+        # if extraction races or partially exists, ignore it
+        if not isinstance(e, FileExistsError):
+            raise
+
+
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_face_mesh = mp.solutions.face_mesh
