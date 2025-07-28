@@ -1,4 +1,4 @@
-chromium-browser
+chromium
 libnss3
 libatk-bridge2.0-0
 libcups2
