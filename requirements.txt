@@ -59,6 +59,6 @@ streamlit
 plotly
 reportlab
 fer==22.5.1
-moviepy
+moviepy==1.0.3
 kaleido
 tensorflow==2.15.0
