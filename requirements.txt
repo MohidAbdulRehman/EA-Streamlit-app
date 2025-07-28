@@ -32,7 +32,7 @@ opt_einsum
 packaging
 pandas
 pillow
-protobuf==3.20.3
+protobuf
 psutil
 py-cpuinfo
 pycparser
@@ -59,6 +59,6 @@ streamlit
 plotly
 reportlab
 fer
-moviepy==1.0.3
+moviepy
 kaleido
 tensorflow
