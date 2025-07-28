@@ -35,20 +35,9 @@ subprocess.run(["pip", "uninstall", "-y", "opencv-python", "opencv-contrib-pytho
 subprocess.run(["pip", "install", "opencv-python-headless"])
 
 
+import os
+os.environ["KALEIDO_CHROME_PATH"] = "/usr/bin/chromium"
 import kaleido
-
-# This will download a private headless Chrome for Kaleido
-# and configure Kaleido to use it automatically.
-chrome_install_dir = os.path.expanduser(
-    "~/.local/lib/python3.11/site-packages/choreographer/cli/browser_exe/chrome‑linux64"
-)
-if not os.path.isdir(chrome_install_dir):
-    try:
-        kaleido.get_chrome_sync()
-    except Exception as e:
-        # if extraction races or partially exists, ignore it
-        if not isinstance(e, FileExistsError):
-            raise
 
 
 mp_drawing = mp.solutions.drawing_utils
