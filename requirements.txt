@@ -61,4 +61,4 @@ reportlab
 fer==22.5.1
 moviepy
 kaleido
-tensorflow
+tensorflow==2.15.0
